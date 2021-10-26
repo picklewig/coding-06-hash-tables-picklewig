@@ -1,3 +1,6 @@
-/* 
- * your comment header here
- */
+/**************
+ * author: Isaac Shepherd
+ * file: hashtable.cpp
+ **************/
+
+#include "hashtable.h"
