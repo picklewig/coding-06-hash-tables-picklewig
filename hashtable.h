@@ -11,6 +11,8 @@
 #include "linkedlist.h"
 #include "data.h"
 
+#define HASHTABLESIZE 15
+
 using std::cout;
 using std::endl;
 using std::string;
@@ -27,7 +29,7 @@ class Hashtable{
         void printTable();
     private:
         int hash(int);
-
+        LinkedList *table[HASHTABLESIZE];
 };
 
 #endif
