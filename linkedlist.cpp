@@ -103,9 +103,14 @@ void LinkedList::printList(bool backwards){
     int nodeNumber = 0;
 
     if(!backwards){
-        while (current) {
+        while(current){
             nodeNumber++;
-            cout << nodeNumber << ": " << current->data.id << ": " << current->data.data << endl;
+            cout << current->data.id;
+            if(current->next != NULL){
+                cout << " --> ";
+            }else{
+                cout << endl;
+            }
             current = current->next;
         }
     } else{

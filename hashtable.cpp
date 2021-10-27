@@ -37,7 +37,9 @@ bool Hashtable::insertEntry(int id, string* information){
 }
 
 void Hashtable::printTable(){
-
+    for(int row{0}; row < HASHTABLESIZE; row++){
+        table[row]->printList();
+    }
 }
 
 bool Hashtable::removeEntry(int id){
