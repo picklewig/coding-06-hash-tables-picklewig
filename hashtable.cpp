@@ -23,7 +23,13 @@ int Hashtable::getCount(){
 }
 
 string Hashtable::getData(int id){
-
+    string foundData = "";
+    Data* emptyStruct;
+    int row = hash(id);
+    if(table[row]->getNode(id, emptyStruct)){
+        foundData = emptyStruct->data;
+    }
+    return foundData;
 }
 
 bool Hashtable::insertEntry(int id, string* information){
@@ -43,5 +49,11 @@ void Hashtable::printTable(){
 }
 
 bool Hashtable::removeEntry(int id){
-
+    bool removed = false;
+    int row = hash(id);
+    if(table[row]->deleteNode(id)){
+        count--;
+        removed = true;
+    }
+    return removed;
 }
