@@ -29,6 +29,7 @@ class Hashtable{
         void printTable();
     private:
         int hash(int);
+        int count;
         LinkedList *table[HASHTABLESIZE];
 };
 
