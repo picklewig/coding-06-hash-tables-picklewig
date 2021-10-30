@@ -48,9 +48,10 @@ int main() {
      */
     
     // create your hash table object here
-    
+    Hashtable MyTable;
     // show it is empty by calling getCount and printTable
-    
+    MyTable.getCount();
+    MyTable.printTable();
     // try and put ALL the test data into the table and show what happens
 
     // continue using and testing your table, add and remove data,

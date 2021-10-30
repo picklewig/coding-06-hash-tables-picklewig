@@ -10,11 +10,14 @@ int Hashtable::hash(int id){ //hash ids to find which location in array to add t
 }
 Hashtable::Hashtable(){
     count = 0;
+    for(int row{0}; row < HASHTABLESIZE; row++){
+        table[row] = new LinkedList;
+    }
 }
 
 Hashtable::~Hashtable(){
     for(int row{0}; row < HASHTABLESIZE; row++){
-        table[row]->clearList();
+        delete table[row];//upon deletion linklist object should call its clearlist method
     }
 }
 
