@@ -54,7 +54,7 @@ void Hashtable::printTable(){
 bool Hashtable::removeEntry(int id){
     bool removed = false;
     int row = hash(id);
-    if(table[row]->deleteNode(id)){
+    if(id > 0 and table[row]->deleteNode(id)){ //needs validation parameter because deletenode doesnt check it
         count--;
         removed = true;
     }

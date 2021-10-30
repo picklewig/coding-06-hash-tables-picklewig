@@ -53,14 +53,35 @@ int main() {
     MyTable.getCount();
     MyTable.printTable();
     // try and put ALL the test data into the table and show what happens
-
+    cout << endl << "Adding entries now..." << endl;
+    for(int index{0}; index < testdatasize; index++){
+        if(MyTable.insertEntry(ids[index], &strs[index])){
+            cout << ids[index] << " was added to table" << endl;
+        }else{
+            cout << ids[index] << " was not added to table" << endl;
+        }
+    }
+    cout << "Displaying hashtable with new entries: " << endl << endl;
+    MyTable.printTable();
     // continue using and testing your table, add and remove data,
     // do whatever it takes to full test your object and prove it
     // is robust and can handle all use cases.
 
-    
-    
-    
+
+
+
+
+    cout << endl << "Entry count is currently: " << MyTable.getCount() << endl;
+    cout << "Deleting all entries from table..." << endl;
+    for(int index{0}; index < testdatasize; index++){
+        if(MyTable.removeEntry(ids[index])){
+            cout << "Entry id: " << ids[index] << " was deleted" << endl;
+        }else{
+            cout << "Entry id: " << ids[index] << " was not deleted" << endl;
+        }
+    }
+    cout << endl << "Entry count is currently: " << MyTable.getCount() << endl;
+    MyTable.printTable();
     
     return 0;
 }

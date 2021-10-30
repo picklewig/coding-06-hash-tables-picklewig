@@ -119,12 +119,17 @@ void LinkedList::printList(bool backwards){
         }
         while(current){
             nodeNumber++;
-            cout << nodeNumber << ": " << current->data.id << ": " << current->data.data << endl;
+            cout << current->data.id;
+            if(current->next != NULL){
+                cout << " --> ";
+            }else{
+                cout << endl;
+            }
             current = current->prev;
         }
     }
     if(nodeNumber == 0){
-        cout << "\tlist is empty" << endl;
+        cout << "EMPTY" << endl;
     }
 }
 
