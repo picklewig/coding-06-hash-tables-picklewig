@@ -1,6 +1,7 @@
 /**************
  * author: Isaac Shepherd
  * file: hashtable.cpp
+ * defines methods, contructor, and destructor of class prototype in hashtable.h
  **************/
 
 #include "hashtable.h"

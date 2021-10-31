@@ -1,6 +1,9 @@
-/* 
- * your comment header here
- */
+/**************
+ * author: Isaac Shepherd
+ * file: main.h
+ * holds constants and variables for randomization of test cases used in main.cpp. includes hashtable.h
+ * to construct hashtable objects in main.cpp
+ **************/
 
 #ifndef MAIN_H
 #define MAIN_H
