@@ -27,10 +27,10 @@ int Hashtable::getCount(){
 
 string Hashtable::getData(int id){
     string foundData = "";
-    Data* emptyStruct;
+    Data emptyStruct;
     int row = hash(id);
-    if(table[row]->getNode(id, emptyStruct)){
-        foundData = emptyStruct->data;
+    if(id > 0 and table[row]->getNode(id, &emptyStruct)){//needs validation parameter because getnode doesnt check
+        foundData = emptyStruct.data;
     }
     return foundData;
 }
@@ -54,7 +54,7 @@ void Hashtable::printTable(){
 bool Hashtable::removeEntry(int id){
     bool removed = false;
     int row = hash(id);
-    if(id > 0 and table[row]->deleteNode(id)){ //needs validation parameter because deletenode doesnt check it
+    if(id > 0 and table[row]->deleteNode(id)){ //needs validation parameter because deletenode doesnt check
         count--;
         removed = true;
     }

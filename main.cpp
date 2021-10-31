@@ -67,7 +67,10 @@ int main() {
     // do whatever it takes to full test your object and prove it
     // is robust and can handle all use cases.
 
-
+    cout << endl << "Getting data strings from table..." << endl;
+    for(int index{0}; index < testdatasize; index++){
+        cout << "Data for list object " << ids[index] << " is: " << MyTable.getData(ids[index]) << endl;
+    }
 
 
 
